@@ -2,26 +2,35 @@ import { defineComponent, ref, reactive, nextTick, onMounted, onUnmounted } from
 import { useRouter } from "vue-router";
 
 
-export default defineComponent(() => {
-  const router = useRouter()
-  const answerRef = ref()
-  const addAnswer = (item:string)=>{
-    console.log(item)
-  }
+export default defineComponent({
+    name: 'this',
+    setup() {
+        const router = useRouter()
+        const answerRef = ref()
+        const addAnswer = (item: string) => {
+            console.log(item)
+        }
+        const title = ref('title')
+        const decLiteral = ref<number>(6)
 
-  const messageDom = () => (
-      <div onClick={() => addAnswer('item')}>this is messageDom</div>
-  )
+        const messageDom = () => (
+            <div onClick={() => addAnswer('item')}>this is messageDom</div>
+        )
 
-  const answerDom = () =>(
-      <div>this is answerDom</div>
-  )
+        const answerDom = () => (
+            <div>{title.value} this is answerDom {decLiteral.value}</div>
+        )
+        onMounted(() => {
+            console.log('mounted')
+        })
 
 
-  return () => (
-    <div class="pd-nav">
-      {messageDom()}
-      {answerDom()}
-    </div>
-  )
+        return () => (
+            <div class="pd-nav">
+                {messageDom()}
+                {answerDom()}
+            </div>
+        )
+    }
+
 })
