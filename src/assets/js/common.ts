@@ -1,5 +1,5 @@
-let windowScreenWidth = function () {
-    let docEl = document.documentElement,
+var windowScreenWidth = function () {
+    var docEl = document.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
             var clientWidth = docEl.clientWidth

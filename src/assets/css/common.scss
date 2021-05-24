@@ -2,16 +2,22 @@ $blue: #0077ff;
 $white: #fff;
 $red:#ff2e6a;
 
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
 }
-html{
+
+html {
     font-size: .16rem;
 }
 
-@mixin badge{
-    font-size:.12rem;
+.home{
+    width: 4.14rem;
+    margin: 0 auto;
+}
+
+@mixin badge {
+    font-size: .12rem;
     color: $white;
     font-weight: normal;
     height: 0.16rem;
@@ -26,42 +32,75 @@ html{
     white-space: nowrap;
 }
 
-.flex-box{
+.flex-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: .24rem;
-    color:$white;
+    color: $white;
     font-weight: bold;
     padding: 0 .18rem;
 }
 
-.nav .right{
-    display: inline-flex;
-    align-items: center;
-    #tucao {
-        width: 0.4rem;
-        height: 0.4rem;
-        display: inline-block;
-        background-image: url(~@/assets/images/tu.png);
-        background-size: 0.24rem;
-        background-position: center right;
-        background-repeat: no-repeat;
-      }
-    #message{
-        width: 0.4rem;
-        height: 0.4rem;
-        display: inline-block;
-        background-image: url(~@/assets/images/message.png);
-        background-size: 0.24rem;
-        background-position: center right;
-        background-repeat: no-repeat;
-        position: relative;
-        .badge{
-            @include badge();
-            position:absolute;
-            top: .03rem;
-            left: .25rem;
+.nav {
+    height: 0.68rem;
+    line-height: 0.68rem;
+    background: $blue;
+
+    .right {
+        display: inline-flex;
+        align-items: center;
+
+        #tucao {
+            width: 0.4rem;
+            height: 0.4rem;
+            display: inline-block;
+            background-image: url(~@/assets/images/tu.png);
+            background-size: 0.24rem;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+
+        #message {
+            width: 0.4rem;
+            height: 0.4rem;
+            display: inline-block;
+            background-image: url(~@/assets/images/message.png);
+            background-size: 0.24rem;
+            background-position: center right;
+            background-repeat: no-repeat;
+            position: relative;
+
+            .badge {
+                @include badge();
+                position: absolute;
+                top: .03rem;
+                left: .25rem;
+            }
+        }
+    }
+}
+
+.index-banner{
+    height:2rem;
+    background:url(~@/assets/images/index_banner_wrap.png) left top no-repeat;
+    background-size: 100% 100%;
+    .banner-wrapper{
+        width: 3.78rem;
+        border-radius: .1rem;
+        -webkit-border-radius: .1rem;
+        -moz-border-radius: .1rem;
+        -ms-border-radius: .1rem;
+        -o-border-radius: .1rem;
+        overflow: hidden;
+        margin: 0 auto;
+        .swiper-slide{
+            width: 100%;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 200px;
+            }
         }
     }
 }
