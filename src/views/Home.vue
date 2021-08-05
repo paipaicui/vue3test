@@ -33,11 +33,10 @@ import HelloWorld from '@/components/HelloWorld.vue';
 import SwiperCore, { Autoplay, Pagination } from 'swiper';
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
 // Import Swiper styles
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
-
+var screen = require('@/assets/js/common.ts');
 SwiperCore.use([Autoplay, Pagination]);
 
 @Options({
@@ -48,6 +47,9 @@ SwiperCore.use([Autoplay, Pagination]);
   },
 })
 export default class Home extends Vue {
+  created() {
+    screen.windowScreenWidth();
+  }
   onSwiper(swiper: unknown): void {
     console.log(swiper);
   }

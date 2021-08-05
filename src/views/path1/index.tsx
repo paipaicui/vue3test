@@ -1,16 +1,16 @@
-import { defineComponent, ref, reactive, nextTick, onMounted, onUnmounted } from "vue";
-import { useRouter } from "vue-router";
-
+// import { defineComponent, ref, reactive, nextTick, onMounted, onUnmounted } from "vue";
+// import { useRouter } from "vue-router";
+import { defineComponent, ref,  onMounted } from "vue";
 
 export default defineComponent({
     name: 'this',
     setup() {
-        const router = useRouter()
-        const answerRef = ref()
+        // const router = useRouter()
+        // const answerRef = ref()
         const addAnswer = (item: string) => {
             console.log(item)
         }
-        const title = ref('title')
+        const title = ref<string>('title')
         const decLiteral = ref<number>(6)
 
         const messageDom = () => (

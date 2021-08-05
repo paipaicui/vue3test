@@ -1,12 +1,13 @@
 "use strict";
 exports.__esModule = true;
+// import { defineComponent, ref, reactive, nextTick, onMounted, onUnmounted } from "vue";
+// import { useRouter } from "vue-router";
 var vue_1 = require("vue");
-var vue_router_1 = require("vue-router");
 exports["default"] = vue_1.defineComponent({
     name: 'this',
     setup: function () {
-        var router = vue_router_1.useRouter();
-        var answerRef = vue_1.ref();
+        // const router = useRouter()
+        // const answerRef = ref()
         var addAnswer = function (item) {
             console.log(item);
         };

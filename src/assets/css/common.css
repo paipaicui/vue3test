@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: .16rem;
+  font-size: 100%;
 }
 
 .home {
@@ -74,6 +74,7 @@ html {
 }
 
 .index-banner {
+  width: 4.14rem;
   height: 2rem;
   background: url(~@/assets/images/index_banner_wrap.png) left top no-repeat;
   background-size: 100% 100%;
@@ -92,10 +93,10 @@ html {
 
 .index-banner .banner-wrapper .swiper-slide {
   width: 100%;
-  height: 200px;
+  height: 2rem;
 }
 
 .index-banner .banner-wrapper .swiper-slide img {
   width: 100%;
-  height: 200px;
+  height: 2rem;
 }

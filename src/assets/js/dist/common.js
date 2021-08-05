@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 var windowScreenWidth = function () {
     var docEl = document.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize', recalc = function () {
         var clientWidth = docEl.clientWidth;

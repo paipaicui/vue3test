@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -25,8 +24,11 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
+//createWebHashHistory() 哈希
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  //createWebHashHistory()
+  //createWebHistory(process.env.BASE_URL) 历史
   routes
 })
 
