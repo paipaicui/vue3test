@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "echarts": "^5.1.2",
+    "echarts": "^5.2.2",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "request": "^2.88.2",

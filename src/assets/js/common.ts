@@ -15,7 +15,6 @@ const windowScreenWidth = function () {
     if (!document.addEventListener) return
     window.addEventListener(resizeEvt, recalc, false)
     document.addEventListener('DOMContentLoaded', recalc, false)
-    console.log(1)
 }
 
 //export default windowScreenWidth
