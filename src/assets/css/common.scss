@@ -2,7 +2,6 @@ $blue: #0077ff;
 $backgroundColor: #fff;
 $red:#ff2e6a;
 $font-main:#353a40;
-
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +14,12 @@ html {
 .home {
     width: 4.14rem;
     margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+}
+
+ul li {
+    list-style: none;
 }
 
 @mixin badge {
@@ -33,6 +38,62 @@ html {
     backgroundColor-space: nowrap;
 }
 
+@mixin border-radius($size) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    -ms-border-radius: $size;
+    -o-border-radius: $size;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centerLR {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+@mixin centerTB {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@mixin scale($size, $origin) {
+    transform-origin: $origin;
+    transform: scale($size);
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    -ms-transform: scale($size);
+    -o-transform: scale($size);
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+
+.button {
+    background: $blue;
+    color: white;
+    text-align: center;
+    @include border-radius(.28rem)
+}
+
 .flex-box {
     display: flex;
     justify-content: space-between;
@@ -43,16 +104,64 @@ html {
     padding: 0 .18rem;
 }
 
+.header {
+    height: .44rem
+}
+
+.top {
+    position: fixed;
+    text-align: center;
+    height: .44rem;
+    line-height: .44rem;
+    align-items: center;
+    font-size: .17rem;
+    color: #fff;
+    background: $blue;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container {
+    height: calc(100vh - .51rem);
+    overflow-y: scroll;
+}
+
+.page-main {
+    padding-top: .44rem;
+}
+
+.footer-menu {
+    position: fixed;
+    height: .51rem;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    font-size: .1rem;
+    line-height: 1;
+    li {
+        width: 100%;
+        padding-top: .06rem;
+        color: #aeb4ba;
+        &.active {
+            color: $blue;
+        }
+        img {
+            display: inline-block;
+            width: .24rem;
+            height: .24rem;
+            margin-bottom: .02rem;
+        }
+    }
+}
+
 .nav {
     height: 0.68rem;
     line-height: 0.68rem;
     background: $blue;
-
-
     .right {
         display: inline-flex;
         align-items: center;
-
         #tucao {
             width: 0.4rem;
             height: 0.4rem;
@@ -62,7 +171,6 @@ html {
             background-position: center right;
             background-repeat: no-repeat;
         }
-
         #message {
             width: 0.4rem;
             height: 0.4rem;
@@ -72,7 +180,6 @@ html {
             background-position: center right;
             background-repeat: no-repeat;
             position: relative;
-
             .badge {
                 @include badge();
                 position: absolute;
@@ -88,21 +195,14 @@ html {
     height: 2rem;
     background: url(~@/assets/images/index_banner_wrap.png) left top no-repeat #f0f7ff;
     background-size: 100% 100%;
-
     .banner-wrapper {
         width: 3.78rem;
-        border-radius: .1rem;
-        -webkit-border-radius: .1rem;
-        -moz-border-radius: .1rem;
-        -ms-border-radius: .1rem;
-        -o-border-radius: .1rem;
         overflow: hidden;
+        @include border-radius(.1rem);
         margin: 0 auto;
-
         .swiper-slide {
             width: 100%;
             height: 2rem;
-
             img {
                 width: 100%;
                 height: 2rem;
@@ -122,19 +222,16 @@ html {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             img {
                 display: inline-block;
                 width: .4rem;
                 height: .4rem;
             }
-
             p {
                 margin-top: 0.08rem;
                 font-size: .14rem;
                 color: $font-main;
             }
-
             &.active::after {
                 content: " ";
                 position: absolute;
@@ -144,13 +241,8 @@ html {
                 top: 0.1rem;
                 right: 25%;
                 background: $red;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
+                @include border-radius(50%);
             }
-
             &.newMore::before {
                 content: "有新功能";
                 position: absolute;
@@ -159,18 +251,13 @@ html {
                 height: .25rem;
                 line-height: .25rem;
                 background: $red;
-                border-radius: .06rem;
-                -webkit-border-radius: .06rem;
-                -moz-border-radius: .06rem;
-                -ms-border-radius: .06rem;
-                -o-border-radius: .06rem;
+                @include border-radius(.06rem);
                 color: $backgroundColor;
                 font-size: .12rem;
                 backgroundColor-space: nowrap;
                 right: .2rem;
                 top: -.1rem
             }
-
             &.newMore::after {
                 content: " ";
                 border-left: .05rem solid transparent;
@@ -181,18 +268,150 @@ html {
                 height: 0;
                 display: inline-block;
                 top: .15rem;
-                left: 50%;
-                transform: translateX(-50%);
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%)
+                @include centerLR();
             }
         }
     }
 }
 
-#chart {
-    width: 3.78rem;
-    height: 2.45rem;
+.index-honor {
+    background: #f4f6f8;
+    padding: 0 .18rem;
+    font-size: .12rem;
+    @include border-radius(.26rem .26rem 0 0);
+    h4.title {
+        position: relative;
+        color: $font-main;
+        height: .35rem;
+        line-height: .35rem;
+        &::after {
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            width: .2rem;
+            height: .2rem;
+            background: url(~@/assets/images/kanban.png) center right /.16rem .16rem no-repeat;
+            @include centerTB();
+        }
+    }
+    .bulletin-board {
+        background: #eaeef4;
+        width: 3.78rem;
+        overflow: hidden;
+        @include border-radius(.1rem);
+        ul.tab {
+            li {
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                height: .36rem;
+                line-height: .36rem;
+                position: relative;
+                &:not(:last-of-type):after {
+                    content: " ";
+                    position: absolute;
+                    width: 1px;
+                    height: .12rem;
+                    background: #d3d3d3;
+                    right: 0;
+                    @include centerTB();
+                }
+                &.active {
+                    color: $blue;
+                    &::before {
+                        position: absolute;
+                        content: " ";
+                        top: 0.29rem;
+                        height: 0.02rem;
+                        width: 0.12rem;
+                        background: $blue;
+                        @include border-radius(.06rem);
+                        @include centerLR();
+                    }
+                }
+            }
+        }
+        .index-chart {
+            background: #fff;
+        }
+    }
+}
+
+.index-block-btn {
+    position: fixed;
+    bottom: 0.63rem;
+    z-index: 9999;
+    font-size: .18rem;
+    height: .52rem;
+    line-height: .52rem;
+    width: 3.3rem;
+    font-weight: bold;
+    background: url(~@/assets/images/index_btn.png) center center / 100% 100% no-repeat;
+    @extend .button;
+    @include centerLR();
+}
+
+.my {
+    .header {
+        background: url(~@/assets/images/my_srarts_bg.png) right top / contain no-repeat #07f;
+        text-align: center;
+        align-items: center;
+        font-size: .17rem;
+        color: #fff;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        .bar {
+            height: .44rem;
+            line-height: .44rem;
+        }
+        .info {
+            text-align: left;
+            display: flex;
+            height: 0.92rem;
+            padding: 0.04rem 0.18rem;
+            box-sizing: border-box;
+            position: relative;
+            .my-photo {
+                width: .74rem;
+                height: .74rem;
+                overflow: hidden;
+                @include border-radius(50%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .my-msg {
+                margin-left: .25rem;
+                p {
+                    line-height: .25rem;
+                    font-size: .16rem;
+                }
+            }
+            .my-star-box {
+                position: absolute;
+                right: 0;
+                width: 1.06rem;
+                height: 0.46rem;
+                bottom: 0.27rem;
+                background: linear-gradient( 324deg, #60627a 0, #121538 100%);
+                opacity: 1;
+                color: #e6b113;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                @include border-radius(.3rem 0 0 .3rem);
+                .star {
+                    padding-left: .44rem;
+                    background: url(../images/my_icon.png) .1rem center / .26rem .26rem no-repeat;
+                }
+                p {
+                    font-size: .12rem;
+                }
+            }
+        }
+    }
+    .content {}
 }

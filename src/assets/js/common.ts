@@ -5,9 +5,9 @@ const windowScreenWidth = function () {
         recalc = function () {
             const clientWidth = docEl.clientWidth
             if (!clientWidth) return
-            if(clientWidth>=1242){
+            if (clientWidth >= 1242) {
                 docEl.style.fontSize = '100px'
-            }else{
+            } else {
                 docEl.style.fontSize = 100 * (clientWidth / 414) + 'px'
             }
         }
@@ -15,9 +15,10 @@ const windowScreenWidth = function () {
     if (!document.addEventListener) return
     window.addEventListener(resizeEvt, recalc, false)
     document.addEventListener('DOMContentLoaded', recalc, false)
+    console.log('fontSize');
 }
 
-//export default windowScreenWidth
-module.exports = {
-    windowScreenWidth
-  };
+export default windowScreenWidth
+// module.exports = {
+//     windowScreenWidth
+// };

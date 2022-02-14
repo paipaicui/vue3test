@@ -51,11 +51,13 @@ module.exports = {
             // sass: {
             //     prependData: `@import "~@/assets/name.scss";`
             // },
-            scss: {
-                prependData: `@import "~@/assets/css/common.scss";`
+            sass: {
+                // prependData: `@import "~@/assets/css/common.scss";`
+
             }
         }, // Enable CSS modules for all css / pre-processor files. // This option does not affect *.vue files.
     },
+
     /* webpack-dev-server 相关配置 */
     devServer: {
         /* 自动打开浏览器 */

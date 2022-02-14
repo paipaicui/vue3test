@@ -11,6 +11,23 @@ html {
 .home {
   width: 4.14rem;
   margin: 0 auto;
+  text-align: left;
+  background-color: #fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+.button, .index-block-btn {
+  background: #0077ff;
+  color: white;
+  text-align: center;
+  border-radius: 0.28rem;
+  -webkit-border-radius: 0.28rem;
+  -moz-border-radius: 0.28rem;
+  -ms-border-radius: 0.28rem;
+  -o-border-radius: 0.28rem;
 }
 
 .flex-box {
@@ -21,6 +38,60 @@ html {
   color: #fff;
   font-weight: bold;
   padding: 0 .18rem;
+}
+
+.header {
+  height: .44rem;
+}
+
+.top {
+  position: fixed;
+  text-align: center;
+  height: .44rem;
+  line-height: .44rem;
+  align-items: center;
+  font-size: .17rem;
+  color: #fff;
+  background: #0077ff;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.container {
+  height: calc(100vh - .51rem);
+  overflow-y: scroll;
+}
+
+.page-main {
+  padding-top: .44rem;
+}
+
+.footer-menu {
+  position: fixed;
+  height: .51rem;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  font-size: .1rem;
+  line-height: 1;
+}
+
+.footer-menu li {
+  width: 100%;
+  padding-top: .06rem;
+  color: #aeb4ba;
+}
+
+.footer-menu li.active {
+  color: #0077ff;
+}
+
+.footer-menu li img {
+  display: inline-block;
+  width: .24rem;
+  height: .24rem;
+  margin-bottom: .02rem;
 }
 
 .nav {
@@ -83,12 +154,12 @@ html {
 
 .index-banner .banner-wrapper {
   width: 3.78rem;
-  border-radius: .1rem;
-  -webkit-border-radius: .1rem;
-  -moz-border-radius: .1rem;
-  -ms-border-radius: .1rem;
-  -o-border-radius: .1rem;
   overflow: hidden;
+  border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  -o-border-radius: 0.1rem;
   margin: 0 auto;
 }
 
@@ -152,11 +223,11 @@ html {
   height: .25rem;
   line-height: .25rem;
   background: #ff2e6a;
-  border-radius: .06rem;
-  -webkit-border-radius: .06rem;
-  -moz-border-radius: .06rem;
-  -ms-border-radius: .06rem;
-  -o-border-radius: .06rem;
+  border-radius: 0.06rem;
+  -webkit-border-radius: 0.06rem;
+  -moz-border-radius: 0.06rem;
+  -ms-border-radius: 0.06rem;
+  -o-border-radius: 0.06rem;
   color: #fff;
   font-size: .12rem;
   backgroundColor-space: nowrap;
@@ -182,7 +253,195 @@ html {
   -o-transform: translateX(-50%);
 }
 
-#chart {
+.index-honor {
+  background: #f4f6f8;
+  padding: 0 .18rem;
+  font-size: .12rem;
+  border-radius: 0.26rem 0.26rem 0 0;
+  -webkit-border-radius: 0.26rem 0.26rem 0 0;
+  -moz-border-radius: 0.26rem 0.26rem 0 0;
+  -ms-border-radius: 0.26rem 0.26rem 0 0;
+  -o-border-radius: 0.26rem 0.26rem 0 0;
+}
+
+.index-honor h4.title {
+  position: relative;
+  color: #353a40;
+  height: .35rem;
+  line-height: .35rem;
+}
+
+.index-honor h4.title::after {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: .2rem;
+  height: .2rem;
+  background: url(~@/assets/images/kanban.png) center right/0.16rem 0.16rem no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.index-honor .bulletin-board {
+  background: #eaeef4;
   width: 3.78rem;
-  height: 2.45rem;
+  overflow: hidden;
+  border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  -o-border-radius: 0.1rem;
+}
+
+.index-honor .bulletin-board ul.tab li {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  height: .36rem;
+  line-height: .36rem;
+  position: relative;
+}
+
+.index-honor .bulletin-board ul.tab li:not(:last-of-type):after {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  height: .12rem;
+  background: #d3d3d3;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.index-honor .bulletin-board ul.tab li.active {
+  color: #0077ff;
+}
+
+.index-honor .bulletin-board ul.tab li.active::before {
+  position: absolute;
+  content: " ";
+  top: 0.29rem;
+  height: 0.02rem;
+  width: 0.12rem;
+  background: #0077ff;
+  border-radius: 0.06rem;
+  -webkit-border-radius: 0.06rem;
+  -moz-border-radius: 0.06rem;
+  -ms-border-radius: 0.06rem;
+  -o-border-radius: 0.06rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.index-honor .bulletin-board .index-chart {
+  background: #fff;
+}
+
+.index-block-btn {
+  position: fixed;
+  bottom: 0.63rem;
+  z-index: 9999;
+  font-size: .18rem;
+  height: .52rem;
+  line-height: .52rem;
+  width: 3.3rem;
+  font-weight: bold;
+  background: url(~@/assets/images/index_btn.png) center center/100% 100% no-repeat;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.my .header {
+  background: url(~@/assets/images/my_srarts_bg.png) right top/contain no-repeat #07f;
+  text-align: center;
+  align-items: center;
+  font-size: .17rem;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.my .header .bar {
+  height: .44rem;
+  line-height: .44rem;
+}
+
+.my .header .info {
+  text-align: left;
+  display: flex;
+  height: 0.92rem;
+  padding: 0.04rem 0.18rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.my .header .info .my-photo {
+  width: .74rem;
+  height: .74rem;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.my .header .info .my-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.my .header .info .my-msg {
+  margin-left: .25rem;
+}
+
+.my .header .info .my-msg p {
+  line-height: .25rem;
+  font-size: .16rem;
+}
+
+.my .header .info .my-star-box {
+  position: absolute;
+  right: 0;
+  width: 1.06rem;
+  height: 0.46rem;
+  bottom: 0.27rem;
+  background: linear-gradient(324deg, #60627a 0, #121538 100%);
+  opacity: 1;
+  color: #e6b113;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0.3rem 0 0 0.3rem;
+  -webkit-border-radius: 0.3rem 0 0 0.3rem;
+  -moz-border-radius: 0.3rem 0 0 0.3rem;
+  -ms-border-radius: 0.3rem 0 0 0.3rem;
+  -o-border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.my .header .info .my-star-box .star {
+  padding-left: .44rem;
+  background: url(../images/my_icon.png) 0.1rem center/0.26rem 0.26rem no-repeat;
+}
+
+.my .header .info .my-star-box p {
+  font-size: .12rem;
 }
